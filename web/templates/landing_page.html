@@ -1,30 +1,25 @@
 {%extends "base.html"%}
 {% block content %}
 <style>
-    body{
-        background-color: #333;
-        
-    }
-    p{
-        font-size: 20px;
-
-    }
     #myContainer{
         height: 50vh;
     }
 </style>
-<body class="text-white">
-    <div class="cover-container d-flex w-100 p-3 mx-auto flex-column justify-content-center h-100vh " id="myContainer">
-        <main role="main" class="inner-cover text-center">
-            <h1 class="cover-heading">Welcome to Pig Dissection</h1>
-            <p class="lead">Pig Dissection is VR learning experiance made for students, teachers or anyone looking for an immersive experiance</br>to learn  about pig anatomy and physiology.</p>
-            <p class="lead">
-                <a href="" class="btn btn-lg btn-secondary">Learn more</a>
-            </p>
-            <p class="lead">Already have an account?</p>
-            <p class="lead" class="btn btn-lg btn-secondary"><a href="" class="btn btn-lg btn-secondary">Login</a></p>
-        </main>
-    </div>
+<head>
+    <title>Pig Dissection VR</title>
+</head>
+<body>
+    <main role="main" class="inner-cover text-center">
+        <h1 class="cover-heading">Welcome to Pig Dissection</h1>
+        <p class="lead">Pig Dissection is VR learning experiance made for students, teachers or anyone looking for an immersive experiance</br>to learn  about pig anatomy and physiology.</p>
+        <p class="lead">The VR experiance can be played for fun or as tracked assignment for teachers to share with their students.</p>
+        <p class="lead">
+            <a href="" class="btn btn-lg btn-secondary">Learn more</a>
+        </p>
+        <p class="lead">Ready to get started?</p>
+        <p class="lead" class="btn btn-lg btn-secondary"><a href="" class="btn btn-lg btn-secondary">Create an Account</a></p>
+        <p class="lead" class="btn btn-lg btn-secondary"><a href="" class="btn btn-lg btn-secondary">Play for fun</a></p>
+    </main>
 </body>
 </html>
 {% endblock %}

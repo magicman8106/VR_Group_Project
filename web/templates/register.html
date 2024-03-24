@@ -1,0 +1,35 @@
+{%extends "base.html"%}
+{% block content %}
+<style>
+
+</style>
+<head>
+    <title>Registration</title>
+</head>
+<body>
+    <main role="main" class="d-flex inner-cover text-center justify-content-center">
+        <div class="card bg-light mb-3 text-dark text-align-center text-center" style="width: 20rem;">
+            {% if error %}
+                <p style="color: red;">{{ error }}</p>
+            {% endif %}
+            <form action="/login" method="post" class="form-signin">
+                <h1 class="h3 mb-3 font-weight-normal">Registration</h1>
+    
+                <label for="email" class="sr-only">email:</label>
+                <input type="text" id="email" name="email" required><br><br>
+    
+                <label for="username" class="sr-only">username:</label>
+                <input type="text" id="username" name="username" required>
+    
+                <label for="password" class="sr-only">Password:</label>
+                <input type="password" id="password" name="password" required><br><br>
+                
+                <button type="submit" class="btn btn-md btn-secondary btn-block mb-1">Register as student</button>
+                <button type="submit" class="btn btn-md btn-secondary btn-block mb-1">Register as teacher</button>
+            </form>
+            <p class="md mb-1 mt-2">Already have an account?</p>
+            <p class="md"><a href="" class="btn btn-md btn-secondary">Login</a></p>
+        </div>
+    </main>
+</body>
+{%endblock%}

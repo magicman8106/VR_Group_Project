@@ -46,6 +46,10 @@ def login():
 @app.route('/register')
 def register():
     return render_template('register.html')
+
+@app.route('/information')
+def information():
+    return render_template('information.html')
 @app.route('/dashboard')
 def dashboard():
     if 'role' not in session:

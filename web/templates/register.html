@@ -13,15 +13,16 @@
                 <p style="color: red;">{{ error }}</p>
             {% endif %}
             <form action="/login" method="post" class="form-signin">
-                <h1 class="h3 mb-3 font-weight-normal">Registration</h1>
+                <h1 class="h3 mb-3 font-weight-normal m-2">Registration</h1>
+                <div class="r-flex justify-content-center text-center">
+                    <label for="email" class="sr-only" style="width: 5rem;" >Email:</label>
+                    <input type="text" id="email" name="email" required><br><br>
+                </div>
     
-                <label for="email" class="sr-only">email:</label>
-                <input type="text" id="email" name="email" required><br><br>
+                <label for="username" class="sr-only" style="width: 5rem;" >Username:</label>
+                <input type="text" id="username" name="username" required><br><br>
     
-                <label for="username" class="sr-only">username:</label>
-                <input type="text" id="username" name="username" required>
-    
-                <label for="password" class="sr-only">Password:</label>
+                <label for="password" class="sr-only" style="width: 5rem;" >Password:</label>
                 <input type="password" id="password" name="password" required><br><br>
                 
                 <button type="submit" class="btn btn-md btn-secondary btn-block mb-1">Register as student</button>

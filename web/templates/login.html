@@ -3,29 +3,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
+   
     <title>Login</title>
 </head>
+<style>
+    body{
+        overflow: hidden;
+    }
+    #logincard{
+        background-color: #BFE7F9;
+        color: black;
+       
+
+    }
+    #loginscreen{
+        height: 100vh;
+        overflow: hidden;
+        background-color: #B1D8B7;
+        border: black;
+        
+    }
+</style>
 <body>
-    <main role="main" class="d-flex inner-cover text-center justify-content-center">
-            <div class="card bg-light mb-3 text-dark text-align-center" style="width: 20rem;">
-                {% if error %}
-                    <p style="color: red;">{{ error }}</p>
-                {% endif %}
-                <form action="/login" method="post" class="form-signin">
-                    <h3 class="card-title ">
-                        Sign In 
-                    </h3>
-                    <!-- <h1 class="h3 mb-3 font-weight-normal"></h1> -->
-                    <label for="username" class="sr-only">Username:</label>
-                    <input type="text" id="username" name="username" required><br><br>
-                    <label for="password" class="sr-only">Password:</label>
-                    <input type="password" id="password" name="password" required><br><br>
-                    <button type="submit" class="btn btn-lg btn-secondary btn-block">Login</button>
-                </form>
-                    <p class="md mb-1 mt-2">Don't have an account?</p>
-                    <p class="md"><a href="/register" class="btn btn-md btn-secondary">Sign Up</a>
-                    </p>
+    <main role="main" class="d-flex inner-cover text-center justify-content-center" id="loginscreen">
+            <div class="card mb-3 text-align-center d-flex justify-content-center border-dark border-5" id="logincard" style="width: 50rem; height: 50vh; margin: 50px;">
+                <div class="row m-3">
+                    <div class="col-7">
+
+                        {% if error %}
+                            <p style="color: red;">{{ error }}</p>
+                        {% endif %}
+                        <form action="/login" method="post" class="form-signin">
+                            <h3 class="card-title ">
+                                Sign In 
+                            </h3>
+                            <!-- <h1 class="h3 mb-3 font-weight-normal"></h1> -->
+                            <label for="username" class="sr-only">Username:</label>
+                            <input type="text" id="username" name="username" required><br><br>
+                            <label for="password" class="sr-only">Password:</label>
+                            <input type="password" id="password" name="password" required><br><br>
+                            <button type="submit" class="btn btn-lg btn-secondary btn-block">Login</button>
+                        </form>
+                    </div>
+                    <div class="col d-flex justify-content-around flex-column align-items-center">
+                        <h3 class="lg row">Don't have an account?</h3>
+                        <p class="lg row"><a href="/register" class="btn btn-md btn-secondary">Sign Up</a></p>
+
+                    </div>
+
+                </div>
             </div>        
     </main>
     

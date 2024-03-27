@@ -1,0 +1,28 @@
+{% extends 'base.html' %}{% block title %}My Grades{% endblock %} {% block
+content %}
+<h1>This is the my grades page for {{'student'}}</h1>
+
+<div class="container">
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        {% for column in columns %}
+        <th scope="col">{{ column }}</th>
+        {% endfor %}
+        <th scope="col">{{ column }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for student in students %}
+      <tr>
+        {% if student['id'] == id %} {% for column in columns %}
+        <td>{{ student[column.lower()] }}</td>
+        {% endfor %} {% endif %}
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+<!-- Bootstrap JS (optional) -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+{% endblock %}

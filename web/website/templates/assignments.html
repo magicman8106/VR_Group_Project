@@ -1,0 +1,52 @@
+{% extends 'base.html' %} {% block title %}HW LIST{% endblock %} {% block
+content %}
+<h1>This is the assignments page!</h1>
+
+<div class="container">
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Assignment</th>
+        <th scope="col">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <a class="assignment-link" href="/assignment-1">Assignment 1</a>
+        </td>
+        <td>Identify the different parts of a young pig</td>
+      </tr>
+      <tr>
+        <td>
+          <a class="assignment-link" href="/assignment-2">Assignment 2</a>
+        </td>
+        <td>Dissect potions of a young pig</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<!-- Bootstrap JS (optional) -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!---<div class="container">
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">{{ 'Assignments' }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{ 'Assignment 1: Pig Part Identification' }}</td>
+      </tr>
+      <tr>
+        <td>{{ 'Assignment 2: Pig Dissection' }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+-->
+
+{% endblock %}

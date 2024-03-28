@@ -1,0 +1,44 @@
+{% extends 'base.html' %} {% block title %}My Students{% endblock %} {% block
+content %}
+<h1>This is the my students page for professor {{user.full_name}}!</h1>
+
+<div class="container">
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        {% for column in columns %}
+        <th scope="col">{{ column }}</th>
+        {% endfor %}
+        <th scope="col">{{ column }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for student in students %}
+      <tr>
+        {% for column in columns %}
+        <td>{{ student[column.lower()] }}</td>
+        {% endfor %}
+        <td>
+          <a class="user-link" href="/my-grades/{{ student.id }}"
+            >View Details</a
+          >
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+<!-- Bootstrap JS (optional) -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!---<ul class="list-group list-group-flush" id="notes">
+  {% for student in students %}
+  <li class="list-group-item">
+    {{ student.full_name }}{{" "}}{{ student.email }} {% for assignment in
+    student.assignments %} -{{assignment.name}}{{" total grade "}}{{
+    assignment.total_grade }} {% endfor %}
+  </li>
+  {% endfor %}
+</ul>-->
+
+{% endblock %}

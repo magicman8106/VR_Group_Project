@@ -1,0 +1,52 @@
+{%extends "base.html"%}
+{% block content %}
+<style>
+    body{
+        overflow: hidden;
+    }
+    #welcome-section{
+        background-color: #B1D8B7;
+        padding: 80px;
+        height: 100vh;
+        
+    }
+    #start-section{
+        background-color: #004AAD;
+        padding: 80px;
+        color: white;
+        height: 100vh;
+        
+    }
+    
+</style>
+<head>
+    <title>Pig Dissection VR</title>
+</head>
+<body>
+    <main role="main" class="inner-cover text-center">
+        <div class="row ">
+            <div class="col-8 d-flex justify-content-start flex-column" id="welcome-section">
+                <div class="text-wrap text-start" style="margin-top: 90px;">
+                    <h1 class="cover-heading">Welcome to Pig Dissection VR</h1>
+                    <p class="lead fw-semibold">Pig Dissection is VR learning experiance made for students, teachers or anyone looking for an immersive experiance to learn  about pig anatomy and physiology.</p>
+                    <p class="lead fw-semibold">The VR experiance can be played for fun or as tracked assignment for teachers to share with their students.</p>
+                    <p class="lead fw-semibold"><a href="/information" class="btn btn-lg btn-secondary">Learn more</a></p>
+                </div>
+            </div>
+            <div class="col d-flex justify-content-start flex-column" id="start-section">
+                <div class="card text-black mb-3 d-flex justify-content-center" style="height: 20rem; margin-top: 60px;">
+                    <h1 class="card-title" style="margin-bottom: 2rem;">Ready to get started?</h1>
+                    <p class="lead" class="btn btn-lg btn-secondary"><a href="/register" class="btn btn-lg btn-secondary">Create an Account</a></p>
+                    <h3 class="mb-3" class="card-subtitle">or</h3>
+                    <p class="lead" class="btn btn-lg btn-secondary"><a href="/information" class="btn btn-lg btn-secondary">Play for fun</a></p>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+       
+    </main>
+</body>
+</html>
+{% endblock %}

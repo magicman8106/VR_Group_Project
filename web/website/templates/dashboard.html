@@ -1,0 +1,114 @@
+{%extends "base.html" %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+
+
+<style>
+  body{
+      overflow: hidden;
+  }
+  #profileCard{
+      /* background-color: #FAE6B1; */
+      color: black;
+     
+
+  }
+  .card-body{
+    background-color: white;
+  }
+  #dashboardScreen{
+      height: 100vh;
+      overflow: hidden;
+      background-color: #31525B;
+      border: black;
+      
+  }
+  p{
+    color: black;
+  }
+</style>
+<body>
+    <main role="main" class="d-flex inner-cover text-center justify-content-center" id="dashboardScreen">
+         
+          <div class="row m-3">
+            <div class="col-4 text-right">
+              <h1 style="color: #FFA101;">Dashboard</h1>
+              <div class="card mb-3 text-align-center d-flex justify-content-center border-dark border-5"   id="profileCard"style="width: 50rem; height: 50vh; margin: 50px;">
+                <section>
+                    <div class="card mb-4">
+                        <div class="card-body">
+                          <div class="row">
+                            <div class="col-sm-3">
+                              <p class="mb-0">Email</p>
+                            </div>
+                            <div class="col-sm-9">
+                              <p class="text-muted mb-0">{{data.email}}</p>
+                            </div>
+                          </div>
+                          <hr>
+                          <div class="row">
+                            <div class="col-sm-3">
+                              <p class="mb-0">Role</p>
+                            </div>
+                            <div class="col-sm-9">
+                              <p class="text-muted mb-0">{{data.role}}</p>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                </section>
+                
+                </div>
+            </div>
+
+          </div>  
+          <div class="row m-3">
+            <div class="col-4 text-right">
+              <div style="height: 48;"></div>
+              <div class="card text-align-center d-flex justify-content-center border-dark border-5 mb-5 "   id="profileCard"style="width: 50rem; height: 50vh; margin: 50px;">
+                <section>
+                  <div class="card-title text-start">
+                    <h2 style="margin-left: 40px;">My Classes</h2>
+                  </div>
+                    <!-- <div class="card mb-4">
+                        <div class="card-body">
+                          <div class="row">
+                            <div class="col-sm-3">
+                              <p class="mb-0">Email</p>
+                            </div>
+                            <div class="col-sm-9">
+                              <p class="text-muted mb-0">{{data.email}}</p>
+                            </div>
+                          </div>
+                          <hr>
+                          <div class="row">
+                            <div class="col-sm-3">
+                              <p class="mb-0">Role</p>
+                            </div>
+                            <div class="col-sm-9">
+                              <p class="text-muted mb-0">{{data.role}}</p>
+                            </div>
+                          </div>
+                      </div>
+                    </div> -->
+                    {% if data.role == "Teacher" %}
+                    <form acton="createClass" method="POST">
+                      <button type="submit" class="btn btn-primary btn-lg">Add A Classroom</button>
+                    </form>
+                    {% endif %}
+                </section>
+                
+                </div>
+            </div>
+          </div>
+  </main>
+  </body>
+<div>
+    
+
+    
+
+</div>
+{%endblock%}
+</html>

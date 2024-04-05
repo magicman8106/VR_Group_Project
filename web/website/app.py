@@ -57,6 +57,24 @@ def get_status(id):
         if user_dict["local_id"] == id:
             return user_dict["is_teacher"] 
     return False
+def get_teacher_classes(id):
+    docs = db.collection("classrooms").stream()
+    class_arr = []
+    for classroom in docs:
+        class_dict  = classroom.to_dict()
+        if class_dict["ownerId"] == id:
+            class_arr.append(class_dict)
+    return class_arr
+def get_student_classes(email):
+    docs = db.collection("classroom").stream()
+    class_arr = []
+    for classroom in docs:
+        class_dict  = classroom.to_dict()
+        if email in class_dict["students"]:
+            class_arr.append(class_dict)
+    return class_arr
+        
+
 @app.route('/')
 def landing_page():
     return render_template('landing_page.html')
@@ -128,10 +146,18 @@ def dashboard_get():
         id_token = session["token"]
         decoded_token = auth.verify_id_token(id_token)
         is_teacher = session["is_teacher"]
+        class_data = []
+        if is_teacher:
+            class_data = get_teacher_classes(decoded_token["user_id"])
+        else:
+            class_data = get_student_classes(decoded_token["email"])
         data = {
             'email': decoded_token['email'],
-            'role' : "Teacher" if is_teacher else "Student"
+            'role' : "Teacher" if is_teacher else "Student",
+            "class_data" : class_data
         }
+        print("the data is ", data)
+
         print(decoded_token)
     except Exception as e:
         print(e)
@@ -139,24 +165,29 @@ def dashboard_get():
     return render_template('dashboard.html', data=data)
 
 @app.post('/dashboard')
-def create_classroom():
+def create_or_join_classroom():
     """Add a classroom Document, each student joining is a collection which has 2 documents,
       assignment 1 and assignment 2. Assignment 1 and 2 both have field for completion"""
-    print("creating classroom")
-    id = session["user"]["localId"]
-    email = session["user"]["email"]
-    is_teacher = get_status(id)
-    if is_teacher:
-        class_code = str(uuid.uuid4())[:7]
-        classroom = {
-            "ownerId" : id,
-            "ownerEmail" : email,
-            "class_code" : class_code,
-            "students" : []
-        }
-        db.collection('classrooms').add(classroom)
+    print(request.form["type"])
+    if request.form["type"] == "add_class":
+        id = session["user"]["localId"]
+        email = session["user"]["email"]
+        is_teacher = get_status(id)
+        if is_teacher:
+            class_code = str(uuid.uuid4())[:7]
+            classroom = {
+                "ownerId" : id,
+                "ownerEmail" : email,
+                "class_code" : class_code,
+                "students" : []
+            }
+            db.collection('classrooms').add(classroom)
+    elif request.form['type'] == "add_class":
+        pass
+    return redirect(url_for('dashboard_get'))
+@app.post('/dashboard/join_class')
+def join_class():
     return dashboard_get()
-
 @app.route('/pig-part-1')
 def pig_part_1():
     return render_template('pig_part_1.html', dissection_info=dissection_info_part1)

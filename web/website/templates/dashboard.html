@@ -93,7 +93,8 @@
                       </div>
                     </div> -->
                     {% if data.role == "Teacher" %}
-                    <form acton="createClass" method="POST">
+                    <form method="POST">
+                      <input hidden name ="type" id="type" value="add_class"/>
                       <button type="submit" class="btn btn-primary btn-lg">Add A Classroom</button>
                     </form>
                     {% endif %}

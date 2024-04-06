@@ -93,6 +93,20 @@
                       </div>
                     </div> -->
                     {% if data.role == "Teacher" %}
+                    <table class="table table-striped justify-content-around" style="margin-left: 10px;">
+                      <thead>
+                        <th>#</th>
+                        <th>Class Code</th>
+                        <th></th>
+                      </thead>
+                      {% for class in class_data %}
+                      <tr>
+                        <th scope="row">{{loop.index}}</th>
+                        <td>{{class.class_code}}</td>
+                        <td><a href=""><button class="btn btn-primary btn-sm">See More</button></a></td>
+                      </tr>
+                      {% endfor %}
+                    </table>
                     <form method="POST">
                       <input hidden name ="type" id="type" value="add_class"/>
                       <button type="submit" class="btn btn-primary btn-lg">Add A Classroom</button>

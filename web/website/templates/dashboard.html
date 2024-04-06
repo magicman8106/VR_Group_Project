@@ -107,10 +107,37 @@
                       </tr>
                       {% endfor %}
                     </table>
-                    <form method="POST">
+                    <form method="POST" >
                       <input hidden name ="type" id="type" value="add_class"/>
                       <button type="submit" class="btn btn-primary btn-lg">Add A Classroom</button>
                     </form>
+                    {% else %}
+                    <div class=" container" style="width: 50%;">
+                      <form class="form-group ">
+                      <div class="row p-1">
+                        <div class="col">
+                          <label for="class_input"><h4>Join a class</h2></label>
+                        </div>
+
+                      </div>
+                      <div class="row p-1">
+                        <div class="col">
+                          <input class="form-control" name = "class_code" id ="class_input" placeholder="Enter Class Code"/>
+                        </div>
+                        
+                      </div>
+                      <div class="row p-1">
+                        <div class="col">
+                          <button type="submit" class="btn btn-primary btn-lg">Join Class</button>
+                        </div>
+                        
+                      </div>
+                     
+                        
+                        
+                        
+                      </form>
+                    </div>
                     {% endif %}
                 </section>
                 

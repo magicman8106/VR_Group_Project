@@ -92,28 +92,28 @@
                           </div>
                       </div>
                     </div> -->
-                    {% if data.role == "Teacher" %}
                     <table class="table table-striped justify-content-around" style="margin-left: 10px;">
                       <thead>
                         <th>#</th>
                         <th>Class Code</th>
                         <th></th>
                       </thead>
-                      {% for class in class_data %}
+                      {% for class_id in class_data %}
                       <tr>
                         <th scope="row">{{loop.index}}</th>
-                        <td>{{class.class_code}}</td>
+                        <td>{{class_id}}</td>
                         <td><a href=""><button class="btn btn-primary btn-sm">See More</button></a></td>
                       </tr>
                       {% endfor %}
                     </table>
-                    <form method="POST" >
+                    {% if data.role == "Teacher" %}
+                    <form  class="form-group" method="POST" >
                       <input hidden name ="type" id="type" value="add_class"/>
                       <button type="submit" class="btn btn-primary btn-lg">Add A Classroom</button>
                     </form>
                     {% else %}
                     <div class=" container" style="width: 50%;">
-                      <form class="form-group ">
+                      <form class="form-group" method="POST">
                       <div class="row p-1">
                         <div class="col">
                           <label for="class_input"><h4>Join a class</h2></label>
@@ -123,19 +123,18 @@
                       <div class="row p-1">
                         <div class="col">
                           <input class="form-control" name = "class_code" id ="class_input" placeholder="Enter Class Code"/>
+                          {% if post_message != None %}
+                          <p style="color: red;">{{post_message}}</p>
+                          {% endif %}
                         </div>
                         
                       </div>
                       <div class="row p-1">
                         <div class="col">
+                          <input hidden name ="type" id="type" value="join_class"/>
                           <button type="submit" class="btn btn-primary btn-lg">Join Class</button>
                         </div>
-                        
                       </div>
-                     
-                        
-                        
-                        
                       </form>
                     </div>
                     {% endif %}

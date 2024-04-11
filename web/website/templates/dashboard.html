@@ -71,27 +71,6 @@
                   <div class="card-title text-start">
                     <h2 style="margin-left: 40px;">My Classes</h2>
                   </div>
-                    <!-- <div class="card mb-4">
-                        <div class="card-body">
-                          <div class="row">
-                            <div class="col-sm-3">
-                              <p class="mb-0">Email</p>
-                            </div>
-                            <div class="col-sm-9">
-                              <p class="text-muted mb-0">{{data.email}}</p>
-                            </div>
-                          </div>
-                          <hr>
-                          <div class="row">
-                            <div class="col-sm-3">
-                              <p class="mb-0">Role</p>
-                            </div>
-                            <div class="col-sm-9">
-                              <p class="text-muted mb-0">{{data.role}}</p>
-                            </div>
-                          </div>
-                      </div>
-                    </div> -->
                     <table class="table table-striped justify-content-around" style="margin-left: 10px;">
                       <thead>
                         <th>#</th>
@@ -101,8 +80,8 @@
                       {% for class_id in class_data %}
                       <tr>
                         <th scope="row">{{loop.index}}</th>
-                        <td>{{class_id}}</td>
-                        <td><a href=""><button class="btn btn-primary btn-sm">See More</button></a></td>
+                        <td class="text-center">{{class_id}}</td>
+                        <td class="text-center"><a href="{{ url_for('redirect_to_class' ,class_code=class_id)}}"><button class="btn btn-primary btn-sm">See More</button></a></td>
                       </tr>
                       {% endfor %}
                     </table>
@@ -118,7 +97,6 @@
                         <div class="col">
                           <label for="class_input"><h4>Join a class</h2></label>
                         </div>
-
                       </div>
                       <div class="row p-1">
                         <div class="col">
@@ -127,7 +105,6 @@
                           <p style="color: red;">{{post_message}}</p>
                           {% endif %}
                         </div>
-                        
                       </div>
                       <div class="row p-1">
                         <div class="col">

@@ -5,6 +5,7 @@ import uuid
 import firebase_admin
 import firebase
 import json
+
 #Init flask app
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'  # Change this to a secure secret key
@@ -33,23 +34,6 @@ firebaseConfig = {
 fire_app = firebase.initialize_app(firebaseConfig)
 # init firestore auth
 auth = fire_app.auth()
-
-# # Dummy data for demonstration purposes
-# students = [
-#     {'name': 'Student 1', 'assignment1': 'Completed', 'assignment2': 'Not completed'},
-#     {'name': 'Student 2', 'assignment1': 'Not completed', 'assignment2': 'Completed'},
-#     # Add more student data as needed
-# ]
-
-# dissection_info_part1 = """
-# Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-# """
-
-# dissection_info_part2 = """
-# Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-# """
-# Routes for login, dashboard, pig dissection, and grades pages
-
 
 def get_status(id):
     """Get status of the current user"""
@@ -91,6 +75,19 @@ def join_class(id, email, class_code):
         class_ref.update({"students": firestore.ArrayUnion([student_data])})
         return 200
     return  401
+def get_class_info(class_code , isTeacher):
+    classes_ref = db.collection("classrooms")
+
+    query = classes_ref.where("class_code", "==", class_code).limit(1)
+    docs = query.stream()
+    for doc in docs:
+        class_data = doc.to_dict()
+        if is_teacher:
+            return class_data
+        else:
+            studnts = class_data
+        
+    return 401
 
 @app.route('/')
 def landing_page():
@@ -176,7 +173,6 @@ def dashboard_get():
     except Exception as e:
         print(e)
         return redirect(url_for('login'))
-    print("class data ", class_data)
     return render_template('dashboard.html', data=data, class_data=class_data, post_message = session.pop('message', None))
 
 @app.post('/dashboard')
@@ -207,6 +203,14 @@ def create_or_join_classroom():
         if join_request == 401:
             session["message"] = "Invlaid Class"
     return redirect(url_for('dashboard_get'))
+
+@app.route('/redirect/<string:class_code>')
+def redirect_to_class(class_code):
+    return redirect(url_for('classroom' , class_code=class_code))
+
+@app.route('/classroom/<string:class_code>')
+def classroom(class_code):
+    return render_template('classroom_teacher.html' ,class_code=class_code )
 
 @app.route('/pig-part-1')
 def pig_part_1():

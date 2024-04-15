@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% block content%}
+<head>
+    <style>
+    .main-section{
+        display: flex;
+        flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 5rem;
+    }
+    #myCarousel{
+        width: 80%;
+    }
+    .carousel-item {
+        text-align: center;
+        padding: 50px;
+        color: #fff;
+        background: #333;
+        height: 300px; /* Adjust height as needed */
+        
+    }
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 5%;
+        margin: 20px;
+    }
+    </style>
+</head>
+<section class="main-section">
+    <div class="text-light d-flex flex-column text-center justify-content-center align-items-center">
+        <h2 class="card-subtitle mb-3" >Activity 1</h2>
+        <p class="card-text">Activity 1 requires the user to make external measurements of the pig, to determine age and gender. </br></br> The user will demonstrate proper hygine and saftey precautions, and will learn about external qualities to perform basic pig examination</p>
+    </div>
+    <div id="myCarousel" class="carousel slide" data-interval="false">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <h1>Step One</h1>
+            <p>Obtain a fetal pig, dissection tray, gloves, ruler, scissors, a probe, and a scalpel.</p>
+          </div>
+          <div class="carousel-item">
+            <h1>Step Two</h1>
+            <p>Using a ruler, measure the length. (Determine its approximate age)</p>
+          </div>
+          <div class="carousel-item">
+            <h1>Step Three</h1>
+            <p>Make sure to rest the pig on its dorsal side (back).</p>
+          </div>
+          <div class="carousel-item">
+            <h1>Step Four</h1>
+            <p>Tie the other ends of the string to the bulbs on the dissecting tray to hold open the pig. (Identify its gender) *Refer button</p>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>      
+</section>
+
+{% endblock %}

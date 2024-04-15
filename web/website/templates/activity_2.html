@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% block content%}
+<head>
+    <style>
+    .main-section{
+        display: flex;
+        flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 5rem;
+    }
+    #myCarousel{
+        width: 80%;
+    }
+    .carousel-item {
+        text-align: center;
+        padding: 50px;
+        color: #fff;
+        background: #333;
+        height: 300px; /* Adjust height as needed */
+        
+    }
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 5%;
+        margin: 20px;
+    }
+    </style>
+</head>
+<section class="main-section">
+    <div class="text-light d-flex flex-column text-center justify-content-center align-items-center">
+        <h2 class="card-subtitle mb-3" >Activity 2</h2>
+        <p class="card-text">Activity 2 requires the user to make internal incisions to identify and examine anatomical parts of the pigs mouth.<br>Along with the proper saftey precautions, the user will have to make incisions in the mouth of pig, and identify key oral components including the epiglottis.</p>
+    </div>
+    <div id="myCarousel" class="carousel slide" data-interval="false">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <h1>Step One</h1>
+            <p>Obtain a fetal pig, dissection tray, gloves, ruler, string, scissors, a probe, and a scalpel.</p>
+          </div>
+          <div class="carousel-item">
+            <h1>Step Two</h1>
+            <p>Expose the organs of the mouth and pharynx by inserting your scissors in the angle of the mouth bilaterally (on both sides) dissecting caudally </br> (in the direction of the tail).</p>
+          </div>
+          <div class="carousel-item">
+            <h1>Step Three</h1>
+            <p>You can continue your incisions/dissections until you see the epiglottis. *Refer button.</p>
+          </div>
+          <div class="carousel-item">
+            <h1>Step Four</h1>
+            <p>Carefully pull the epiglottis, and continue to cut dorsal to it. Continue to cut until you see the larynx with its opening, the glottis.</p>
+          </div>
+          <div class="carousel-item">
+            <h1>Step Five</h1>
+            <p>Once you have made your bilateral dissections, you will have to pry open the oral cavity  using your hands. The mouth should be easily swung open. *Refer button</p>
+          </div>
+          <div class="carousel-item">
+            <h1>Step Six</h1>
+            <p>Wrap the pig in damp paper towels and put the specimen into a plastic bag.</p>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>      
+</section>
+
+{% endblock %}

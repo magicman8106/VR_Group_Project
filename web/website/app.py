@@ -76,6 +76,7 @@ def join_class(id, email, class_code):
         return 200
     return  401
 def get_class_info(class_code , isTeacher):
+    """Get information given a class code, if is student, only return the data for that student"""
     classes_ref = db.collection("classrooms")
 
     query = classes_ref.where("class_code", "==", class_code).limit(1)
@@ -150,6 +151,7 @@ def log_out():
     return redirect(url_for('landing_page'))
 @app.route('/information')
 def information():
+    
     return render_template('information.html')
 
 
@@ -212,14 +214,14 @@ def redirect_to_class(class_code):
 def classroom(class_code):
     return render_template('classroom_teacher.html' ,class_code=class_code )
 
-@app.route('/pig-part-1')
+@app.route('/activity_1')
 def pig_part_1():
-    return render_template('pig_part_1.html', dissection_info=dissection_info_part1)
+    return render_template('activity_1.html')
 
 
-@app.route('/pig-part-2')
+@app.route('/activity_2')
 def pig_part_2():
-    return render_template('pig_part_2.html', dissection_info=dissection_info_part2)
+    return render_template('activity_2.html')
 
 def is_teacher(local_id):
     """Searches data base for user and returns teacher status"""

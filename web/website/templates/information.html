@@ -7,47 +7,90 @@
         ul li {
             margin-bottom: 1px;
         }
+        .main-section{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #B1D8B7;
+            justify-content: center;
+            padding: 5rem;
+        }
+        .cardType{
+            width: 60rem;
+            background-color: #004AAD;
+            height: fit-content;
+            align-items: center;
+        }
+        .cardBody{
+            display: flex;
+            justify-content: space-around;
+            flex-direction: row;
+            margin: 2rem;
+        }
+        .activityButton{
+            height: 100px;
+            width: 400px;
+            font-size: 40px;
+            margin-bottom: 30px;
+        }
+        a{
+            color: inherit;
+            text-decoration: inherit;
+        }
+        
     </style>
 </head>
-<div class="card bg-light mb-3 text-dark text-align-cente d-flex flex-row"style="width: 45rem;">
-    <main role="main" class="d-flex flex-column text-center justify-content-center align-items-center">
+<section class="main-section">
+    <main role="main" class=" text-dark d-flex flex-column text-center justify-content-center align-items-center">
         <h1 class="cover-heading">What can Pig Dissection VR Do?</h1>
-        <p class="lead">Pig Dissection VR currently offers 2 distinct activities for users to enjoy</p>
-        <p class="lead">Teachers can give their student a unique class code to use at the beggining of the activity so progress can be tracked </p>        
-    <div class="d-flex flex-column align-items-center m-3 p-1" style="width: 20rem;">
-        <h2 class="card-subtitle mb-3" >Activity 1</h2>
-        <p class="card-text">Activity 1 requires the user to make external measurements of the pig, to determine age and gender. </br></br> The user will demonstrate proper hygine and saftey precautions, and will learn about external qualities to perform basic pig examination</p>
-    </div>
-    <div class="d-flex flex-column align-items-center m-3 p-1" >
-        <h2 class="card-subtitle mb-3" >Features</h2>
-        <ul style="width: 20rem; height: 1rem;">
-            <li class="card-text"><p>Hygine and Saftey precautions</p></li>
-            <li class="card-text"><p>Measuring External Features</p></li>
-            <li class="card-text"><p>Use of VR tools</p></li>
-            <li class="card-text"><p>Basic Classification of age and gender</p></li>
-            <li class="card-text"><p>Step by step guide on the web</p></li>
-        </ul>
-    </div>
-</div>
-<div class="card bg-light mb-3 text-dark text-align-cente d-flex flex-row"style="width: 45rem;">
-    <div class="d-flex flex-column align-items-center m-3 p-1" style="width: 20rem;">
-        <h3 class="card-title">Activity 2</h3>
-        <p class="card-text m-3">Activity 2 requires the user to make internal incisions to identify and examine anatomical parts of the pig.<br>Along with the proper saftey precautions, the user will have   to make incisions on the pig, and identify key organs and components in different body systems.</p>
-    </div>
-    
-    <div class="d-flex flex-column align-items-center m-3 p-1" >
-        <h2 class="card-subtitle mb-3" >Features</h2>
-        <ul style="width: 20rem; height: 1rem;">
-            <li class="card-text"><p>Hygine and Saftey precautions</p></li>
-            <li class="card-text"><p>Measuring External Features</p></li>
-            <li class="card-text"><p>Use of VR tools</p></li>
-            <li class="card-text"><p>Incising into the mouth and throat system</p></li>
-            <li class="card-text"><p>Basic Classification of age and gender</p></li>
-            <li class="card-text"><p>Step by step guide on the web</p></li>
-        </ul>
-    </div>
-</div>
+        <p class=" text-dark font-weight-bold" style="font-size: 30px;">Pig Dissection VR currently offers 2 distinct activities for users to enjoy</p>
+        <p class="text-dark font-weight-bold" style="font-size: 30px;">Teachers can give their student a unique class code to use at the beggining of the activity so progress can be tracked </p>        
+    </main>
+    <div>
+        <div class="card mb-3 text-light text-align-center cardType" >
+            <div class="cardBody">
+                <div class="d-flex flex-column align-items-center m-3 p-1" style="width: 20rem;">
+                    <h2 class="card-subtitle mb-3" >Activity 1</h2>
+                    <p class="card-text">Activity 1 requires the user to make external measurements of the pig, to determine age and gender. </br></br> The user will demonstrate proper hygine and saftey precautions, and will learn about external qualities to perform basic pig examination</p>
+                </div>
+                <div class="d-flex flex-column align-items-center m-3 p-1" >
+                    <h2 class="card-subtitle mb-3" >Features</h2>
+                    <ul style="width: 20rem; height: 1rem;">
+                        <li class="card-text"><p>Hygine and Saftey precautions</p></li>
+                        <li class="card-text"><p>Measuring External Features</p></li>
+                        <li class="card-text"><p>Use of VR tools</p></li>
+                        <li class="card-text"><p>Basic Classification of age and gender</p></li>
+                        <li class="card-text"><p>Step by step guide on the web</p></li>
+                    </ul>
+                </div>
+            </div>
+            <button type="button" class="btn btn-secondary btn-lg activityButton"><a href="/activity_1">Play Activity 1</a></button>
+        </div>
+        <div class="card mb-3 text-light text-align-center cardType">
 
-</main>
+            <div class="cardBody">
+                <div class="d-flex flex-column align-items-center m-3 p-1" style="width: 20rem;">
+                    <h3 class="card-title">Activity 2</h3>
+                    <p class="card-text m-3">Activity 2 requires the user to make internal incisions to identify and examine anatomical parts of the pigs mouth.<br>Along with the proper saftey precautions, the user will have to make incisions in the mouth of pig, and identify key oral components including the epiglottis.</p>
+                </div>
+                <div class="d-flex flex-column align-items-center m-3 p-1" >
+                    <h2 class="card-subtitle mb-3" >Features</h2>
+                    <ul style="width: 20rem; height: 1rem;">
+                        <li class="card-text"><p>Hygine and Saftey precautions</p></li>
+                        <li class="card-text"><p>Measuring External Features</p></li>
+                        <li class="card-text"><p>Use of VR tools</p></li>
+                        <li class="card-text"><p>Incising into the mouth and throat system</p></li>
+                        <li class="card-text"><p>Basic Classification of age</p></li>
+                        <li class="card-text"><p>Step by step guide on the web</p></li>
+                    </ul>
+                </div>
+            </div>
+            <button type="button" class="btn btn-secondary btn-lg activityButton"> <a href="activity_2">Play Activity 2</a></button>
+        </div>
+    </div>
+</section>
+
+
+
 </body>
 {%endblock%}

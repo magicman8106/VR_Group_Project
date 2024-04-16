@@ -52,11 +52,10 @@ def get_teacher_classes(id):
         if class_dict["ownerId"] == id:
             class_arr.append(class_dict["class_code"])
     return class_arr
-def get_student_classes( id, email):
+def get_student_classes(email):
     """Get all classes a student is a part of"""
     print("student classes")
-    
-    results =  db.collection("classrooms").where(filter=FieldFilter("students", "array_contains", {"id": id ,"email"  : email})).stream()
+    results = db.collection("classrooms").where(filter=FieldFilter("students", "array_contains", email)).stream()
     enrolled_classes = []
     for doc in results:
         class_dict = doc.to_dict()
@@ -69,25 +68,34 @@ def join_class(id, email, class_code):
 
     query = classes_ref.where("class_code", "==", class_code).limit(1)
     results = query.stream()
-    student_data = {"id": id, "email" : email}
+    student_data = {"id": id, "email" : email, "assignment_1" : 0, "assignment_2" :0}
     for doc in results:
         class_ref = doc.reference
-        class_ref.update({"students": firestore.ArrayUnion([student_data])})
+        class_ref.collection("students").add(student_data)
+        class_ref.update({"students": firestore.ArrayUnion([email])})
         return 200
     return  401
-def get_class_info(class_code , isTeacher):
+def get_class_info(class_code, id : None):
     """Get information given a class code, if is student, only return the data for that student"""
-    classes_ref = db.collection("classrooms")
+    
+    if id is not None:
+        classroom_query = db.collection('classrooms').where('class_code' , "==", class_code)
+        class_docs = list(classroom_query.stream())
+        if len(class_docs) > 0:
+            classroom_doc_ref = class_docs[0].reference
+            student_query = classroom_doc_ref.collection('students').where(filter = FieldFilter('id', '==', id))
+            student_docs = list(student_query.stream())
+            if len(student_docs) > 0:
+                matched_data = student_docs[0].to_dict()
+                return matched_data
+        return None
+    else:
+        """
+        Return all data for the class, and all student grades
+        """
+        classroom = db.collection('classrooms').where(filter=FieldFilter("class_code", "==", class_code).limit(1)).stream()
+        class_data = classroom.to_dict()
 
-    query = classes_ref.where("class_code", "==", class_code).limit(1)
-    docs = query.stream()
-    for doc in docs:
-        class_data = doc.to_dict()
-        if is_teacher:
-            return class_data
-        else:
-            studnts = class_data
-        
     return 401
 
 @app.route('/')
@@ -166,8 +174,7 @@ def dashboard_get():
         if is_teacher:
             class_data = get_teacher_classes(decoded_token["user_id"])
         else:
-            class_data = get_student_classes(decoded_token["user_id"],decoded_token["email"])
-            print("student class data ", class_data)
+            class_data = get_student_classes(decoded_token["email"])
         data = {
             'email': decoded_token['email'],
             'role' : "Teacher" if is_teacher else "Student"
@@ -193,9 +200,10 @@ def create_or_join_classroom():
                 "ownerId" : id,
                 "ownerEmail" : email,
                 "class_code" : class_code,
-                "students" : []
             }
             db.collection('classrooms').add(classroom)
+            
+            
     elif request.form['type'] == "join_class":
         #code for a student to join a class
         class_code = request.form["class_code"]
@@ -212,7 +220,13 @@ def redirect_to_class(class_code):
 
 @app.route('/classroom/<string:class_code>')
 def classroom(class_code):
-    return render_template('classroom_teacher.html' ,class_code=class_code )
+    class_data = None
+    if session["is_teacher"] == True:
+        class_data = get_class_info()
+    else:
+        class_data=get_class_info(class_code,session["user"]["localId"])
+    print("class data ", class_data)
+    return render_template('classroom_teacher.html' ,class_code=class_code, class_data=class_data )
 
 @app.route('/activity_1')
 def pig_part_1():

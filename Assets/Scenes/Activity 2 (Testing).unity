@@ -6519,6 +6519,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 687713877}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7e107490549bbf64bb5d9d52a1fbd577,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 687713882}
   m_SourcePrefab: {fileID: 100100000, guid: 7e107490549bbf64bb5d9d52a1fbd577, type: 3}
 --- !u!1 &687713876 stripped
 GameObject:
@@ -6562,7 +6566,7 @@ MonoBehaviour:
   _maxSelectingInteractors: -1
   _data: {fileID: 0}
   _pointableElement: {fileID: 0}
-  _rigidbody: {fileID: 0}
+  _rigidbody: {fileID: 687713882}
   _grabSource: {fileID: 0}
   _useClosestPointAsGrabSource: 0
   _releaseDistance: 0
@@ -6585,7 +6589,7 @@ MonoBehaviour:
   _maxSelectingInteractors: -1
   _data: {fileID: 0}
   _pointableElement: {fileID: 0}
-  _rigidbody: {fileID: 0}
+  _rigidbody: {fileID: 687713882}
   _physicsGrabbable: {fileID: 0}
   _resetGrabOnGrabsUpdated: 1
   _scoringModifier:
@@ -6639,6 +6643,33 @@ MonoBehaviour:
   _pointable: {fileID: 0}
   _rigidbody: {fileID: 0}
   _scaleMassWithSize: 1
+--- !u!54 &687713882
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 687713876}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &691896008
 GameObject:
   m_ObjectHideFlags: 0
@@ -7608,6 +7639,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 941735381}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8df4b59126abf3b4ea23b43e664f9eea,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 941735386}
   m_SourcePrefab: {fileID: 100100000, guid: 8df4b59126abf3b4ea23b43e664f9eea, type: 3}
 --- !u!1001 &794899049
 PrefabInstance:
@@ -7716,6 +7751,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 794899051}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1f348bc302832ca4d9e12ba613b567f7,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 794899056}
   m_SourcePrefab: {fileID: 100100000, guid: 1f348bc302832ca4d9e12ba613b567f7, type: 3}
 --- !u!1 &794899050 stripped
 GameObject:
@@ -7736,7 +7775,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _pointable: {fileID: 794899054}
-  _rigidbody: {fileID: 372904523}
+  _rigidbody: {fileID: 794899056}
   _scaleMassWithSize: 1
 --- !u!114 &794899052
 MonoBehaviour:
@@ -7755,7 +7794,7 @@ MonoBehaviour:
   _maxSelectingInteractors: -1
   _data: {fileID: 0}
   _pointableElement: {fileID: 794899054}
-  _rigidbody: {fileID: 372904523}
+  _rigidbody: {fileID: 794899056}
   _grabSource: {fileID: 0}
   _useClosestPointAsGrabSource: 0
   _releaseDistance: 0
@@ -7822,6 +7861,33 @@ MonoBehaviour:
   blockId: 
   instanceId: c8d49f09-b8ed-423c-9bca-33a94e9315c6
   version: 1
+--- !u!54 &794899056
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 794899050}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &799002585
 GameObject:
   m_ObjectHideFlags: 0
@@ -9351,7 +9417,7 @@ MonoBehaviour:
   _maxSelectingInteractors: -1
   _data: {fileID: 0}
   _pointableElement: {fileID: 941735384}
-  _rigidbody: {fileID: 372904523}
+  _rigidbody: {fileID: 941735386}
   _grabSource: {fileID: 0}
   _useClosestPointAsGrabSource: 0
   _releaseDistance: 0
@@ -9374,7 +9440,7 @@ MonoBehaviour:
   _maxSelectingInteractors: -1
   _data: {fileID: 0}
   _pointableElement: {fileID: 941735384}
-  _rigidbody: {fileID: 372904523}
+  _rigidbody: {fileID: 941735386}
   _physicsGrabbable: {fileID: 0}
   _resetGrabOnGrabsUpdated: 1
   _scoringModifier:
@@ -9432,6 +9498,33 @@ MonoBehaviour:
   blockId: 
   instanceId: b32a4de0-3da4-44e4-971c-2b795fa5598b
   version: 1
+--- !u!54 &941735386
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 941735378}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &942108610
 GameObject:
   m_ObjectHideFlags: 0
@@ -14937,6 +15030,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1467690018}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 041ed41dac500274b81a1ed920c74db7,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1467690023}
   m_SourcePrefab: {fileID: 100100000, guid: 041ed41dac500274b81a1ed920c74db7, type: 3}
 --- !u!1 &1467690017 stripped
 GameObject:
@@ -14957,7 +15054,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _pointable: {fileID: 1467690021}
-  _rigidbody: {fileID: 0}
+  _rigidbody: {fileID: 1467690023}
   _scaleMassWithSize: 1
 --- !u!114 &1467690019
 MonoBehaviour:
@@ -14976,7 +15073,7 @@ MonoBehaviour:
   _maxSelectingInteractors: -1
   _data: {fileID: 0}
   _pointableElement: {fileID: 0}
-  _rigidbody: {fileID: 0}
+  _rigidbody: {fileID: 1467690023}
   _grabSource: {fileID: 0}
   _useClosestPointAsGrabSource: 0
   _releaseDistance: 0
@@ -14999,7 +15096,7 @@ MonoBehaviour:
   _maxSelectingInteractors: -1
   _data: {fileID: 0}
   _pointableElement: {fileID: 1467690021}
-  _rigidbody: {fileID: 372904523}
+  _rigidbody: {fileID: 1467690023}
   _physicsGrabbable: {fileID: 0}
   _resetGrabOnGrabsUpdated: 1
   _scoringModifier:
@@ -15057,6 +15154,33 @@ MonoBehaviour:
   blockId: 
   instanceId: a04a66f9-a2b8-4966-9814-c4ff99732c90
   version: 1
+--- !u!54 &1467690023
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1467690017}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1472485229
 GameObject:
   m_ObjectHideFlags: 0
@@ -18113,6 +18237,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1771748911}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b464f74b41aeb624891a2c446ba4e4d0,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1771748916}
   m_SourcePrefab: {fileID: 100100000, guid: b464f74b41aeb624891a2c446ba4e4d0, type: 3}
 --- !u!1 &1771748910 stripped
 GameObject:
@@ -18133,7 +18261,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _pointable: {fileID: 1771748915}
-  _rigidbody: {fileID: 0}
+  _rigidbody: {fileID: 1771748916}
   _scaleMassWithSize: 1
 --- !u!114 &1771748912
 MonoBehaviour:
@@ -18152,7 +18280,7 @@ MonoBehaviour:
   _maxSelectingInteractors: -1
   _data: {fileID: 0}
   _pointableElement: {fileID: 0}
-  _rigidbody: {fileID: 0}
+  _rigidbody: {fileID: 1771748916}
   _grabSource: {fileID: 0}
   _useClosestPointAsGrabSource: 0
   _releaseDistance: 0
@@ -18175,7 +18303,7 @@ MonoBehaviour:
   _maxSelectingInteractors: -1
   _data: {fileID: 0}
   _pointableElement: {fileID: 1771748915}
-  _rigidbody: {fileID: 0}
+  _rigidbody: {fileID: 881129818}
   _physicsGrabbable: {fileID: 0}
   _resetGrabOnGrabsUpdated: 1
   _scoringModifier:
@@ -18233,6 +18361,33 @@ MonoBehaviour:
   _twoGrabTransformer: {fileID: 0}
   _targetTransform: {fileID: 0}
   _maxGrabPoints: -1
+--- !u!54 &1771748916
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1771748910}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1772124998
 GameObject:
   m_ObjectHideFlags: 0

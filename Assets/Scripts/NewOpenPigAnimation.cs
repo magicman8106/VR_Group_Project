@@ -5,7 +5,6 @@ using UnityEngine;
 public class NewOpenPigAnimation : MonoBehaviour
 {
     private Animator anime;
-    public GameObject knife; // Assign your knife GameObject here
     private bool knifeTouching = false;
     private float touchDuration = 0.0f;
     public float requiredTouchTime = 1.0f; // Time in seconds
@@ -31,7 +30,7 @@ public class NewOpenPigAnimation : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject == knife)
+        if (other.gameObject.CompareTag("Tool"))
         {
             knifeTouching = true;
         }
@@ -39,7 +38,7 @@ public class NewOpenPigAnimation : MonoBehaviour
 
     void OnTriggerExit(Collider other)
     {
-        if (other.gameObject == knife)
+        if (other.gameObject.CompareTag("Tool"))
         {
             knifeTouching = false;
             touchDuration = 0.0f; // Reset the timer
@@ -50,7 +49,8 @@ public class NewOpenPigAnimation : MonoBehaviour
     {
         if (anime != null)
         {
-            anime.SetTrigger("trOpen");
+            anime.SetTrigger("trOpen"); 
         }
     }
+
 }

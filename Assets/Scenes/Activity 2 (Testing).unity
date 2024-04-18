@@ -6495,6 +6495,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: scalpel
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7e107490549bbf64bb5d9d52a1fbd577,
+        type: 3}
+      propertyPath: m_TagString
+      value: Tools
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7726,6 +7731,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: tweezers
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1f348bc302832ca4d9e12ba613b567f7,
+        type: 3}
+      propertyPath: m_TagString
+      value: Tools
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9383,7 +9393,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 381bac77e8e624c8f862403713047d48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  knife: {fileID: 1467690017}
   requiredTouchTime: 2
 --- !u!114 &941735381
 MonoBehaviour:
@@ -13418,6 +13427,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: tray
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e69dca3819de38f459d1021e071ef6a1,
+        type: 3}
+      propertyPath: m_TagString
+      value: Tools
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15000,6 +15014,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: scissors
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 041ed41dac500274b81a1ed920c74db7,
+        type: 3}
+      propertyPath: m_TagString
+      value: Tools
       objectReference: {fileID: 0}
     - target: {fileID: 7202271454713460447, guid: 041ed41dac500274b81a1ed920c74db7,
         type: 3}
@@ -18212,6 +18231,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: poker
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b464f74b41aeb624891a2c446ba4e4d0,
+        type: 3}
+      propertyPath: m_TagString
+      value: Tools
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -343,7 +343,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 413810394}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c2e9dae24a8e4dcf9abf67231fb235d, type: 3}
+  m_Script: {fileID: 11500000, guid: cd6710d1a552f4288a534a9714f7816d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &413810396
@@ -691,7 +691,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 059f4a8b3739f41639d0482ffc35b545, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 25190eccf600c43c29259b28e9b6e9c2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -793,8 +793,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 413810395}
-        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
-        m_MethodName: LoadSecondMainMenu
+        m_TargetAssemblyTypeName: MainMenuController, Assembly-CSharp
+        m_MethodName: OnPlayButtonClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

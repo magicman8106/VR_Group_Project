@@ -28,7 +28,7 @@ firebaseConfig = {
     "messagingSenderId": "200880306592",
     "appId": "1:200880306592:web:255d538e6d45e33c82ccc5",
     "measurementId": "G-D1CHZNNBMY"
-  };
+  }
 #Init firebase webapp
 
 fire_app = firebase.initialize_app(firebaseConfig)
@@ -223,10 +223,11 @@ def classroom(class_code):
     class_data = None
     if session["is_teacher"] == True:
         class_data = get_class_info()
+        
     else:
         class_data=get_class_info(class_code,session["user"]["localId"])
     print("class data ", class_data)
-    return render_template('classroom_teacher.html' ,class_code=class_code, class_data=class_data )
+    return render_template('classroom_teacher.html' ,class_data=class_data, class_code=class_code )
 
 @app.route('/activity_1')
 def pig_part_1():

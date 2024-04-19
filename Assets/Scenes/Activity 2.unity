@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18018535, g: 0.22559482, b: 0.30677685, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4608,7 +4608,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f85892a15da80704299dabc0d9ad7248,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2116525689}
+      addedObject: {fileID: 453623630}
     - targetCorrespondingSourceObject: {fileID: -8391222552659086748, guid: f85892a15da80704299dabc0d9ad7248,
         type: 3}
       insertIndex: -1
@@ -6809,7 +6809,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: f8766c17-aaf8-4b55-9431-de8deea83842
-  instanceId: 29fdcadb-5dda-45e2-91be-94c0520edfd3
+  instanceId: e6463450-c688-4935-9e5e-782be2f87354
   version: 1
 --- !u!54 &687713882
 Rigidbody:
@@ -8030,6 +8030,26 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 794899057}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1f348bc302832ca4d9e12ba613b567f7,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 794899051}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1f348bc302832ca4d9e12ba613b567f7,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 794899052}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1f348bc302832ca4d9e12ba613b567f7,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 794899053}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1f348bc302832ca4d9e12ba613b567f7,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 794899054}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1f348bc302832ca4d9e12ba613b567f7,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 794899055}
   m_SourcePrefab: {fileID: 100100000, guid: 1f348bc302832ca4d9e12ba613b567f7, type: 3}
 --- !u!1 &794899050 stripped
 GameObject:
@@ -8134,7 +8154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: f8766c17-aaf8-4b55-9431-de8deea83842
-  instanceId: 29fdcadb-5dda-45e2-91be-94c0520edfd3
+  instanceId: 3adf7274-96a9-41c1-952f-84242bc371f8
   version: 1
 --- !u!54 &794899056
 Rigidbody:
@@ -10023,7 +10043,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: f8766c17-aaf8-4b55-9431-de8deea83842
-  instanceId: 29fdcadb-5dda-45e2-91be-94c0520edfd3
+  instanceId: 78bf373f-ea18-4107-b90e-d88bf8baf416
   version: 1
 --- !u!65 &941735388
 BoxCollider:
@@ -13570,7 +13590,7 @@ Transform:
   m_GameObject: {fileID: 1261395479}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1.029, z: 2.335}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -16220,7 +16240,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: f8766c17-aaf8-4b55-9431-de8deea83842
-  instanceId: 29fdcadb-5dda-45e2-91be-94c0520edfd3
+  instanceId: fe2082b4-af18-4d34-b8da-d2e9b2c7998e
   version: 1
 --- !u!54 &1467690023
 Rigidbody:
@@ -23212,38 +23232,6 @@ MonoBehaviour:
   _headPoseRelativeOffsetRotation: {x: 0, y: 0, z: 0}
   _headPoseRelativeOffsetTranslation: {x: 0, y: 0, z: 0}
   profilerTcpPort: 32419
-  expandMixedRealityCapturePropertySheet: 0
-  enableMixedReality: 0
-  compositionMethod: 0
-  extraHiddenLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  extraVisibleLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  dynamicCullingMask: 1
-  externalCompositionBackdropColorRift: {r: 0, g: 1, b: 0, a: 1}
-  externalCompositionBackdropColorQuest: {r: 0, g: 0, b: 0, a: 0}
-  capturingCameraDevice: 0
-  flipCameraFrameHorizontally: 0
-  flipCameraFrameVertically: 0
-  handPoseStateLatency: 0
-  sandwichCompositionRenderLatency: 0
-  sandwichCompositionBufferedFrames: 8
-  chromaKeyColor: {r: 0, g: 1, b: 0, a: 1}
-  chromaKeySimilarity: 0.6
-  chromaKeySmoothRange: 0.03
-  chromaKeySpillRange: 0.06
-  useDynamicLighting: 0
-  depthQuality: 1
-  dynamicLightingSmoothFactor: 8
-  dynamicLightingDepthVariationClampingValue: 0.001
-  virtualGreenScreenType: 0
-  virtualGreenScreenTopY: 10
-  virtualGreenScreenBottomY: -10
-  virtualGreenScreenApplyDepthCulling: 0
-  virtualGreenScreenDepthTolerance: 0.2
-  mrcActivationMode: 0
   launchSimultaneousHandsControllersOnStartup: 0
   isInsightPassthroughEnabled: 0
   requestBodyTrackingPermissionOnStartup: 0
@@ -23398,33 +23386,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1225144427}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2116525687 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f85892a15da80704299dabc0d9ad7248,
-    type: 3}
-  m_PrefabInstance: {fileID: 453623628}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &2116525689
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2116525687}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2127410168
 GameObject:
   m_ObjectHideFlags: 0

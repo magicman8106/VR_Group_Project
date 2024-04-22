@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18018535, g: 0.22559482, b: 0.30677685, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028373, g: 0.22571398, b: 0.30692294, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5251,6 +5251,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1156523333}
+    - targetCorrespondingSourceObject: {fileID: 1338243545944059599, guid: 930b7a19d446f4b4c9c810e37e84e625,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2068328251}
   m_SourcePrefab: {fileID: 100100000, guid: 930b7a19d446f4b4c9c810e37e84e625, type: 3}
 --- !u!1001 &453623628
 PrefabInstance:
@@ -11494,16 +11498,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4f82fa2b14c3418f920112c13ea2ee3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  userHand: {fileID: 1156523336}
-  scalpel: {fileID: 0}
-  pig: {fileID: 0}
-  pickupDistance: 0.5
---- !u!4 &1156523336 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 705561775665358165, guid: 930b7a19d446f4b4c9c810e37e84e625,
-    type: 3}
-  m_PrefabInstance: {fileID: 449480373}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1160875012
 GameObject:
   m_ObjectHideFlags: 0
@@ -12141,8 +12135,8 @@ GameObject:
   - component: {fileID: 1207459277}
   - component: {fileID: 1207459276}
   - component: {fileID: 1207459275}
-  - component: {fileID: 1207459274}
   - component: {fileID: 1207459273}
+  - component: {fileID: 1207459279}
   m_Layer: 0
   m_Name: '[BuildingBlock] Pig'
   m_TagString: Untagged
@@ -12177,27 +12171,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &1207459274
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1207459272}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1207459275
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12279,6 +12252,29 @@ Transform:
   - {fileID: 628518362}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &1207459279
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1207459272}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.2905391
+  m_Height: 0.19684465
+  m_Direction: 1
+  m_Center: {x: 0.004162997, y: 0.006341718, z: 0.0021611229}
 --- !u!1 &1210339789
 GameObject:
   m_ObjectHideFlags: 0
@@ -20910,8 +20906,8 @@ GameObject:
   - component: {fileID: 1963993133}
   - component: {fileID: 1963993132}
   - component: {fileID: 1963993131}
-  - component: {fileID: 1963993130}
   - component: {fileID: 1963993129}
+  - component: {fileID: 1963993135}
   m_Layer: 0
   m_Name: '[BuildingBlock] scalpel'
   m_TagString: Tools
@@ -20946,27 +20942,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &1963993130
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1963993128}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1963993131
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -21048,6 +21023,29 @@ Transform:
   - {fileID: 2143062271}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!136 &1963993135
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1963993128}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.7028354
+  m_Height: 0.28355205
+  m_Direction: 1
+  m_Center: {x: -0.5400596, y: 0.017474473, z: -2.878015e-15}
 --- !u!1 &1967977005
 GameObject:
   m_ObjectHideFlags: 0
@@ -21994,6 +21992,35 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1587038097}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2068328248 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1338243545944059599, guid: 930b7a19d446f4b4c9c810e37e84e625,
+    type: 3}
+  m_PrefabInstance: {fileID: 449480373}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &2068328251
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2068328248}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.51139545
+  m_Height: 1.3617686
+  m_Direction: 1
+  m_Center: {x: -0.1714004, y: 0.00039350986, z: 0.007171848}
 --- !u!1 &2071706815
 GameObject:
   m_ObjectHideFlags: 0

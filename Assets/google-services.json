@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "200880306592",
+    "firebase_url": "https://pigvr-d43d5-default-rtdb.firebaseio.com",
+    "project_id": "pigvr-d43d5",
+    "storage_bucket": "pigvr-d43d5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:200880306592:android:7ba7dd0fffa86f7182ccc5",
+        "android_client_info": {
+          "package_name": "com.google.firebase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCXyF7b7ZhClgZqKfZeeeyOjG0VbLKFrR8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

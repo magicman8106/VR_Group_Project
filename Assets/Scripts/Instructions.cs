@@ -77,6 +77,14 @@ public class Instructions : MonoBehaviour
             {
                 text.text = activity2instructions[currentPage];
             }
+            else
+            {
+                currentPage = currentPage - change;
+            }
+        }
+        else
+        {
+            currentPage = currentPage - change;
         }
     }
 }

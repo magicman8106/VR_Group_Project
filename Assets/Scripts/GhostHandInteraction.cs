@@ -20,7 +20,8 @@ public class GhostHandInteraction : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if(other.transform.tag == "Tool")
+        Debug.Log(other.tag);
+        if(other.transform.tag == "Tools")
         {
             ghosthand.SetActive(false);
         }

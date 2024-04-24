@@ -6,35 +6,43 @@ public class OpenPig : MonoBehaviour
 {
     private Animator anime;
 
+    public GameObject uncutPig;
+    public GameObject cutPig;
+
     // Start is called before the first frame update
     void Start()
     {
-        anime = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Open()
     {
-
-        //   }
-
-        //   void Open()
-        //   {
-        if (anime != null)
+        if(anime == null)
         {
-            if (Input.GetKeyDown(KeyCode.O))
-            {
-                anime.SetTrigger("trOpen");
-            }
-            //    }
-
-            //    void Close()
-            //    {
-            //        if (anime != null)
-            if (Input.GetKeyDown(KeyCode.C))
-            {
-                anime.SetTrigger("trClose");
-            }
+            anime = cutPig.GetComponent<Animator>();
+        }
+        anime.SetTrigger("trOpen");
+    }
+    /*
+    public void Close()
+    {
+        if(anime != null)
+        {
+            anime.SetTrigger("trClose");
         }
     }
+    */
+    void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Tools")
+        {
+            Switch();
+        }
+    }
+    public void Switch()
+    {
+        uncutPig.SetActive(false);
+        cutPig.SetActive(true);
+        Open();
+    }
 }
+

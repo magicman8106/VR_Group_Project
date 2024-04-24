@@ -7,7 +7,7 @@ public class Instructions : MonoBehaviour
 {
     public Text text;
 
-    string[] instruction = {"Activity 2: Dissection Techniques & Initial Incision",
+    string[] activity2instructions = {"Activity 2: Dissection Techniques & Initial Incision",
         "Objective:  To learn safe and proper dissection techniques and make an initial incision to access the pig's internal anatomy.",
         "Materials:\\r\\n\\r\\n    Dissecting tray\\r\\n    Preserved fetal pig\\r\\n    Dissection tools",
         "Preparation:\r\n\r\n    Put on gloves and safety goggles.\r\n    Position the pig on its back in the dissecting tray.",
@@ -24,7 +24,7 @@ public class Instructions : MonoBehaviour
     void Start()
     {
         currentPage = 0;
-        text.text = instruction[currentPage];
+        text.text = activity2instructions[currentPage];
 
     }
 
@@ -46,6 +46,9 @@ public class Instructions : MonoBehaviour
     public void ChangeSlide(int change)
     {
         currentPage = currentPage + change;
-        text.text = instruction[currentPage];
+        if(currentPage > -1 && currentPage < activity2instructions.Length)
+        {
+            text.text = activity2instructions[currentPage];
+        }
     }
 }

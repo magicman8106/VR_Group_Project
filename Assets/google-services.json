@@ -8,9 +8,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:200880306592:android:7ba7dd0fffa86f7182ccc5",
+        "mobilesdk_app_id": "1:200880306592:android:6981c20bdb9e766282ccc5",
         "android_client_info": {
-          "package_name": "com.google.firebase"
+          "package_name": "com.UnityTechnologies.com.unity.template.urpblank"
         }
       },
       "oauth_client": [],

@@ -28,7 +28,7 @@ public class Instructions : MonoBehaviour
         "Objective:  To learn safe and proper dissection techniques and make an initial incision to access the pig's internal anatomy.",
         "Safety Reminders:\r\n\r\n    Always cut away from your body and fingers.\r\n    Use tools for their intended purpose.\r\n    Inform the instructor immediately in case of any cuts or injuries.",
         "Tips:\r\n\r\n    Dissect slowly and carefully.\r\n    Use the probe to initially separate tissues before cutting.\r\n    Keep your work area clean and organized.",
-        "Materials:\\r\\n\\r\\n    Dissecting tray\\r\\n    Preserved fetal pig\\r\\n    Dissection tools",
+        "Materials:\r\n\r\n    Dissecting tray\r\n    Preserved fetal pig\r\n    Dissection tools",
         "Preparation:\r\n\r\n    Put on gloves and safety goggles.\r\n    Position the pig on its back in the dissecting tray.",
         "Tool Selection:\r\n\r\n    Scalpel: Use for initial incisions into the skin. Handle with caution as blades are extremely sharp.\r\n    Scissors: Use for longer cuts and cutting through muscle tissue.\r\n    Forceps: Use for picking up and manipulating tissues.\r\n    Probe: Use for separating and exploring structures without cutting.",
         "Initial Incision\r\n\r\n    Locate the umbilical cord: Find the cord on the mid-abdomen.\r\n    Shallow cut: Using the scalpel, make a shallow U-shaped incision around the umbilical cord, cutting through the skin only.\r\n    Deepening the cut: Switch to scissors and carefully extend the incision upward towards the neck and downward towards the hind legs. Cut through muscle layers as needed.",

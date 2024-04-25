@@ -5,11 +5,11 @@ public class ActivitySelectionController : MonoBehaviour
 {
     public void OnActivity1ButtonClick()
     {
-        SceneManager.LoadScene("Login");
+        SceneManager.LoadScene("Activity 1");
     }
 
     public void OnActivity2ButtonClick()
     {
-        SceneManager.LoadScene("Login");
+        SceneManager.LoadScene("Activity 2");
     }
 }

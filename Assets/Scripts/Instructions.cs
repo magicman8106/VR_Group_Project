@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Instructions : MonoBehaviour
 {
@@ -76,6 +77,10 @@ public class Instructions : MonoBehaviour
             else if(isAct2 && currentPage < activity2instructions.Length)
             {
                 text.text = activity2instructions[currentPage];
+            }
+            else if(isAct1 && currentPage == activity1instructions.Length)
+            {
+                SceneManager.LoadScene("Activity 2");
             }
             else
             {
